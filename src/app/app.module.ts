@@ -1,16 +1,25 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { EmplyeesListComponent } from './components/employees/emplyees-list/emplyees-list.component';
+import { AddEmployeeComponent } from './components/employees/add-employee/add-employee.component';
+import { FormsModule } from '@angular/forms';
+import { EditEmployeeComponent } from './components/employees/edit-employee/edit-employee.component';
 @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    EmplyeesListComponent,
+    AddEmployeeComponent,
+    EditEmployeeComponent
+    ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
